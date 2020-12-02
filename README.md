@@ -1,6 +1,6 @@
 # txtmarker: Highlight text in documents
 
-<span style="background-color: #FFFF00">txtmarker</span> highlights text in documents. txtmarker takes a list of (name, text) pairs, scan an input document and creates a modified version with highlights embedded.
+txtmarker highlights text in documents. txtmarker takes a list of (name, text) pairs, scan an input document and creates a modified version with highlights embedded.
 
 Current file formats supported:
 
