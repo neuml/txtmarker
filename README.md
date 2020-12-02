@@ -1,6 +1,6 @@
-# <mark>txtmarker</mark>: Highlight text in documents
+# txtmarker: Highlight text in documents
 
-txtmarker highlights text in documents. txtmarker takes a list of (name, text) pairs, scan an input document and creates a modified version with highlights embedded.
+<mark>txtmarker</mark> highlights text in documents. txtmarker takes a list of (name, text) pairs, scan an input document and creates a modified version with highlights embedded.
 
 Current file formats supported:
 
