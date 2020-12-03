@@ -1,5 +1,7 @@
 # txtmarker: Highlight text in documents
 
+![demo](https://raw.githubusercontent.com/neuml/txtmarker/master/demo.png)
+
 txtmarker highlights text in documents. txtmarker takes a list of (name, text) pairs, scan an input document and creates a modified version with highlights embedded.
 
 Current file formats supported:
