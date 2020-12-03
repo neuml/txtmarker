@@ -1,5 +1,12 @@
 # txtmarker: Highlight text in documents
 
+[![Version](https://img.shields.io/github/release/neuml/txtmarker.svg?style=flat&color=success)](https://github.com/neuml/txtmarker/releases)
+[![GitHub Release Date](https://img.shields.io/github/release-date/neuml/txtmarker.svg?style=flat&color=blue)](https://github.com/neuml/txtmarker/releases)
+[![GitHub issues](https://img.shields.io/github/issues/neuml/txtmarker.svg?style=flat&color=success)](https://github.com/neuml/txtmarker/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/neuml/txtmarker.svg?style=flat&color=blue)](https://github.com/neuml/txtmarker)
+[![Build Status](https://github.com/neuml/txtmarker/workflows/build/badge.svg)](https://github.com/neuml/txtmarker/actions?query=workflow%3Abuild)
+[![Coverage Status](https://img.shields.io/coveralls/github/neuml/txtmarker)](https://coveralls.io/github/neuml/txtmarker?branch=master)
+
 ![demo](https://raw.githubusercontent.com/neuml/txtmarker/master/demo.png)
 
 txtmarker highlights text in documents. txtmarker takes a list of (name, text) pairs, scan an input document and creates a modified version with highlights embedded.
