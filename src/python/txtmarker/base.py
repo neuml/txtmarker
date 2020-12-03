@@ -36,4 +36,7 @@ class Highlighter(object):
             infile: path to read input file
             outfile: path to store annotated file
             highlights: list of (name, text) elements to highlight. Supports text or regular expressions.
+
+        Returns:
+            annotation metadata - list of (title, rgb, page, x1, y1, x2, y2)
         """

@@ -58,6 +58,8 @@ class Highlighter(base.Highlighter):
 
         self.annotate(annotations, infile, outfile)
 
+        return annotations
+
     def extract(self, elements, layout):
         """
         Extracts text lines and associated coordinates.
