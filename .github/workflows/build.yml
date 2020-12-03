@@ -23,7 +23,7 @@ jobs:
 
       - name: Build
         run: |
-          pip install -U wheel coverage coveralls
+          pip install pip wheel coverage coveralls
           pip install .
           python --version
           make data coverage
