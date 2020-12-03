@@ -36,3 +36,65 @@ The examples directory has a series of examples and notebooks giving an overview
 |:----------|:-------------|------:|
 | [Introducing txtmarker](https://github.com/neuml/txtmarker/blob/master/examples/01_Introducing_txtmarker.ipynb) | Overview of the functionality provided by txtmarker | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neuml/txtmarker/blob/master/examples/01_Introducing_txtmarker.ipynb) |
 | [Highlighting with Transformers](https://github.com/neuml/txtmarker/blob/master/examples/02_Highlighting_with_Transformers.ipynb) | AI-driven highlighting with Transformers | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neuml/txtmarker/blob/master/examples/02_Highlighting_with_Transformers.ipynb) |
+
+
+## Configuration
+
+The following section gives an overview of highlighters and available methods/configuration. See the notebooks above for detailed examples.
+
+### Create a new highlighter
+
+```python
+from txtmarker.factory import Factory
+highlighter = Factory.create("pdf")
+```
+
+#### extension
+```yaml
+extension: string
+```
+
+Type of highlighter to create (i.e. pdf)
+
+#### Optional constructor arguments:
+
+#### formatter
+```yaml
+formatter: callable
+```
+
+Formats queries and input text using this method. Helps with cleanup of files with lots of symbols and other content.
+
+#### chunks
+```yaml
+chunks: int
+```
+
+Splits queries into multiple chunks. This is designed for very long text matches.
+
+### Highlight text
+
+```python
+highlighter.highlight("input.pdf", "output.pdf", [("name", "text to highlight")])
+```
+
+#### infile
+```yaml
+infile: string
+```
+
+Full path to input file
+
+#### outfile
+```yaml
+outfile: string
+```
+
+Full path to output file, i.e. the highlighted file
+
+#### highlights
+```yaml
+highlights: list of (string, string|regex)
+```
+
+List of highlight elements. Each pair has a name (can be None) and text value. The text can either be a string or a regular expression.
