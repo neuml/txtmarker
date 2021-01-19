@@ -1,11 +1,33 @@
-# txtmarker: Highlight text in documents
+<p align="center">
+    <img src="https://raw.githubusercontent.com/neuml/txtmarker/master/logo.png"/>
+</p>
 
-[![Version](https://img.shields.io/github/release/neuml/txtmarker.svg?style=flat&color=success)](https://github.com/neuml/txtmarker/releases)
-[![GitHub Release Date](https://img.shields.io/github/release-date/neuml/txtmarker.svg?style=flat&color=blue)](https://github.com/neuml/txtmarker/releases)
-[![GitHub issues](https://img.shields.io/github/issues/neuml/txtmarker.svg?style=flat&color=success)](https://github.com/neuml/txtmarker/issues)
-[![GitHub last commit](https://img.shields.io/github/last-commit/neuml/txtmarker.svg?style=flat&color=blue)](https://github.com/neuml/txtmarker)
-[![Build Status](https://github.com/neuml/txtmarker/workflows/build/badge.svg)](https://github.com/neuml/txtmarker/actions?query=workflow%3Abuild)
-[![Coverage Status](https://img.shields.io/coveralls/github/neuml/txtmarker)](https://coveralls.io/github/neuml/txtmarker?branch=master)
+<h3 align="center">
+    <p>Highlight text in documents</p>
+</h3>
+
+<p align="center">
+    <a href="https://github.com/neuml/txtmarker/releases">
+        <img src="https://img.shields.io/github/release/neuml/txtmarker.svg?style=flat&color=success" alt="Version"/>
+    </a>
+    <a href="https://github.com/neuml/txtmarker/releases">
+        <img src="https://img.shields.io/github/release-date/neuml/txtmarker.svg?style=flat&color=blue" alt="GitHub Release Date"/>
+    </a>
+    <a href="https://github.com/neuml/txtmarker/issues">
+        <img src="https://img.shields.io/github/issues/neuml/txtmarker.svg?style=flat&color=success" alt="GitHub issues"/>
+    </a>
+    <a href="https://github.com/neuml/txtmarker">
+        <img src="https://img.shields.io/github/last-commit/neuml/txtmarker.svg?style=flat&color=blue" alt="GitHub last commit"/>
+    </a>
+    <a href="https://github.com/neuml/txtmarker/actions?query=workflow%3Abuild">
+        <img src="https://github.com/neuml/txtmarker/workflows/build/badge.svg" alt="Build Status"/>
+    </a>
+    <a href="https://coveralls.io/github/neuml/txtmarker?branch=master">
+        <img src="https://img.shields.io/coveralls/github/neuml/txtmarker" alt="Coverage Status">
+    </a>
+</p>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ![demo](https://raw.githubusercontent.com/neuml/txtmarker/master/demo.png)
 
