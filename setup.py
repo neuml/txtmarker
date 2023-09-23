@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
     DESCRIPTION = f.read()
 
 setup(name="txtmarker",
-      version="1.0.0",
+      version="1.1.0",
       author="NeuML",
       description="Finds and highlights text in documents",
       long_description=DESCRIPTION,
@@ -20,7 +20,7 @@ setup(name="txtmarker",
       packages=find_packages(where="src/python"),
       package_dir={"": "src/python"},
       keywords="pdf highlight text search",
-      python_requires=">=3.6",
+      python_requires=">=3.8",
       install_requires=[
           "pdfminer.six>=20201018",
           "pdf-annotate>=0.11.0"

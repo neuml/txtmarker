@@ -46,7 +46,7 @@ You can also install txtmarker directly from GitHub. Using a Python Virtual Envi
 
     pip install git+https://github.com/neuml/txtmarker
 
-Python 3.6+ is supported
+Python 3.8+ is supported
 
 ## Examples
 
