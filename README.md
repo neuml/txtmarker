@@ -2,9 +2,9 @@
     <img src="https://raw.githubusercontent.com/neuml/txtmarker/master/logo.png"/>
 </p>
 
-<h3 align="center">
-    <p>Highlight text in documents</p>
-</h3>
+<p align="center">
+    <b>Highlight text in documents</b>
+</p>
 
 <p align="center">
     <a href="https://github.com/neuml/txtmarker/releases">
