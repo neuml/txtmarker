@@ -47,9 +47,7 @@ class TestPDF(unittest.TestCase):
             (None, "Python provides the built-in .hash()"),
         ]
 
-        annotations = highlighter.highlight(
-            self.path("hash.pdf"), self.path("out.pdf"), highlights
-        )
+        annotations = highlighter.highlight(self.path("hash.pdf"), self.path("out.pdf"), highlights)
 
         # Check annotations created
         self.assertEqual(len(annotations), 5)
@@ -67,9 +65,7 @@ class TestPDF(unittest.TestCase):
         # Create duplicate highlights to test overlapping range
         highlights = [("Overlaps", "This article will explore various methods")] * 4
 
-        annotations = highlighter.highlight(
-            self.path("embeddings.pdf"), self.path("out.pdf"), highlights
-        )
+        annotations = highlighter.highlight(self.path("embeddings.pdf"), self.path("out.pdf"), highlights)
 
         # Check annotations created
         self.assertEqual(len(annotations), 4)
@@ -90,9 +86,7 @@ class TestPDF(unittest.TestCase):
             ),
         ]
 
-        annotations = highlighter.highlight(
-            self.path("neuml.pdf"), self.path("out.pdf"), highlights
-        )
+        annotations = highlighter.highlight(self.path("neuml.pdf"), self.path("out.pdf"), highlights)
 
         # Check annotations created
         self.assertEqual(len(annotations), 2)
@@ -104,13 +98,9 @@ class TestPDF(unittest.TestCase):
 
         highlighter = Factory.create("pdf")
 
-        highlights = [
-            ("Multi-column", "enable machine-learning(.|\n)+specific domains")
-        ]
+        highlights = [("Multi-column", "enable machine-learning(.|\n)+specific domains")]
 
-        annotations = highlighter.highlight(
-            self.path("neuml.pdf"), self.path("out2.pdf"), highlights
-        )
+        annotations = highlighter.highlight(self.path("neuml.pdf"), self.path("out2.pdf"), highlights)
 
         # Check annotations created
         self.assertEqual(len(annotations), 2)

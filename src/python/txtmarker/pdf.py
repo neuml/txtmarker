@@ -44,29 +44,18 @@ class Highlighter(base.Highlighter):
                                 break
 
                         # Create annotation for each column
-                        annotations.append(
-                            (name, base.COLORS[index], page)
-                            + self.layout(elements[start:eindex])
-                        )
-                        annotations.append(
-                            (name, base.COLORS[index], page)
-                            + self.layout(elements[eindex : end + 1])
-                        )
+                        annotations.append((name, base.COLORS[index], page) + self.layout(elements[start:eindex]))
+                        annotations.append((name, base.COLORS[index], page) + self.layout(elements[eindex : end + 1]))
                     else:
                         # Single column annotation
-                        annotations.append(
-                            (name, base.COLORS[index], page)
-                            + self.layout(elements[start : end + 1])
-                        )
+                        annotations.append((name, base.COLORS[index], page) + self.layout(elements[start : end + 1]))
 
         self.annotate(annotations, infile, outfile)
 
         return annotations
 
     def pages(self, infile):
-        for page, layout in enumerate(
-            extract_pages(infile, laparams=LAParams(line_margin=1.0, char_margin=4.0))
-        ):
+        for page, layout in enumerate(extract_pages(infile, laparams=LAParams(line_margin=1.0, char_margin=4.0))):
             elements = []
 
             # Extract elements
@@ -235,9 +224,7 @@ class Highlighter(base.Highlighter):
             annotator.add_annotation(
                 "square",
                 Location(x1=x1, y1=y1, x2=x2, y2=y2, page=page),
-                Appearance(
-                    fill=rgb + (0.3,), stroke_color=rgb + (0.3,), stroke_width=0
-                ),
+                Appearance(fill=rgb + (0.3,), stroke_color=rgb + (0.3,), stroke_width=0),
             )
 
             if title:
@@ -326,9 +313,7 @@ class Highlighter(base.Highlighter):
                 y1, y2 = y1 - offset, y2 - offset
             else:
                 # Try with positive offset
-                conflicts = self.conflicts(
-                    ranges, page, column, y1 + offset, y2 + offset
-                )
+                conflicts = self.conflicts(ranges, page, column, y1 + offset, y2 + offset)
                 if not conflicts:
                     y1, y2 = y1 + offset, y2 + offset
                 else:
@@ -372,6 +357,4 @@ class Highlighter(base.Highlighter):
             number of overlapping coordinates
         """
 
-        return len(
-            set(range(int(start1), int(end1))) & set(range(int(start2), int(end2)))
-        )
+        return len(set(range(int(start1), int(end1))) & set(range(int(start2), int(end2))))
