@@ -3,15 +3,18 @@ Base highlighter module
 """
 
 # Highlight colors
-COLORS = [(0.914, 0.118, 0.388), # Red
-          (0.129, 0.588, 0.953), # Blue
-          (1.000, 0.757, 0.027), # Yellow
-          (0.298, 0.686, 0.314), # Green
-          (0.404, 0.227, 0.718), # Purple
-          (1.000, 0.596, 0.000), # Orange
-          (0.475, 0.333, 0.282)] # Bronze
+COLORS = [
+    (0.914, 0.118, 0.388),  # Red
+    (0.129, 0.588, 0.953),  # Blue
+    (1.000, 0.757, 0.027),  # Yellow
+    (0.298, 0.686, 0.314),  # Green
+    (0.404, 0.227, 0.718),  # Purple
+    (1.000, 0.596, 0.000),  # Orange
+    (0.475, 0.333, 0.282),  # Bronze
+]
 
-class Highlighter(object):
+
+class Highlighter:
     """
     Base class that finds text and adds annotations to files.
     """
@@ -39,4 +42,15 @@ class Highlighter(object):
 
         Returns:
             annotation metadata - list of (title, rgb, page, x1, y1, x2, y2)
+        """
+
+    def pages(self, infile):
+        """
+        Opens input file and returns an iterator of pages.
+
+        Args:
+            infile: path to read input file
+
+        Returns:
+            iterator of pages
         """

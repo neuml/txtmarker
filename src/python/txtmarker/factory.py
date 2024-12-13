@@ -4,7 +4,8 @@ Factory module
 
 from . import pdf
 
-class Factory(object):
+
+class Factory:
     """
     Creates document highlighters.
     """

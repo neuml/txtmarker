@@ -9,6 +9,7 @@ import unittest
 # pylint: disable=E0401
 from txtmarker.factory import Factory
 
+
 class TestPDF(unittest.TestCase):
     """
     PDF tests
@@ -36,13 +37,19 @@ class TestPDF(unittest.TestCase):
 
         highlights = [
             ("Basic", "Hashing is a key part"),
-            ("Multi-line", "Hashes are used to secure. Hashes can be deterministic or non-deterministic. Hashes can be significantly " +
-             "different with small changes to data or very similar."),
+            (
+                "Multi-line",
+                "Hashes are used to secure. Hashes can be deterministic or non-deterministic. Hashes can be significantly "
+                + "different with small changes to data or very similar.",
+            ),
             ("Regex", "This article.*Python"),
             ("Regex Multi-line", "The above(.|\n)+is deterministic"),
-            (None, "Python provides the built-in .hash()")]
+            (None, "Python provides the built-in .hash()"),
+        ]
 
-        annotations = highlighter.highlight(self.path("hash.pdf"), self.path("out.pdf"), highlights)
+        annotations = highlighter.highlight(
+            self.path("hash.pdf"), self.path("out.pdf"), highlights
+        )
 
         # Check annotations created
         self.assertEqual(len(annotations), 5)
@@ -60,7 +67,9 @@ class TestPDF(unittest.TestCase):
         # Create duplicate highlights to test overlapping range
         highlights = [("Overlaps", "This article will explore various methods")] * 4
 
-        annotations = highlighter.highlight(self.path("embeddings.pdf"), self.path("out.pdf"), highlights)
+        annotations = highlighter.highlight(
+            self.path("embeddings.pdf"), self.path("out.pdf"), highlights
+        )
 
         # Check annotations created
         self.assertEqual(len(annotations), 4)
@@ -72,11 +81,18 @@ class TestPDF(unittest.TestCase):
 
         highlighter = Factory.create("pdf", lambda x: re.sub(r"[^A-Za-z0-9]", "", x), 4)
 
-        highlights = [("End newline", "txtai builds an AI-powered index over sections of text\n"),
-                      ("Long line", "NeuML has years of relevant experience in building data strategies for both small and large organizations. " +
-                       "With the right data, valuable insights can be gained by capitalizing on modern advances in machine learning. ")]
+        highlights = [
+            ("End newline", "txtai builds an AI-powered index over sections of text\n"),
+            (
+                "Long line",
+                "NeuML has years of relevant experience in building data strategies for both small and large organizations. "
+                + "With the right data, valuable insights can be gained by capitalizing on modern advances in machine learning. ",
+            ),
+        ]
 
-        annotations = highlighter.highlight(self.path("neuml.pdf"), self.path("out.pdf"), highlights)
+        annotations = highlighter.highlight(
+            self.path("neuml.pdf"), self.path("out.pdf"), highlights
+        )
 
         # Check annotations created
         self.assertEqual(len(annotations), 2)
@@ -88,9 +104,13 @@ class TestPDF(unittest.TestCase):
 
         highlighter = Factory.create("pdf")
 
-        highlights = [("Multi-column", "enable machine-learning(.|\n)+specific domains")]
+        highlights = [
+            ("Multi-column", "enable machine-learning(.|\n)+specific domains")
+        ]
 
-        annotations = highlighter.highlight(self.path("neuml.pdf"), self.path("out2.pdf"), highlights)
+        annotations = highlighter.highlight(
+            self.path("neuml.pdf"), self.path("out2.pdf"), highlights
+        )
 
         # Check annotations created
         self.assertEqual(len(annotations), 2)

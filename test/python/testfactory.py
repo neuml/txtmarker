@@ -7,6 +7,7 @@ import unittest
 # pylint: disable=E0401
 from txtmarker.factory import Factory
 
+
 class TestFactory(unittest.TestCase):
     """
     Factory tests
