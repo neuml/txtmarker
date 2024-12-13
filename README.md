@@ -31,7 +31,7 @@
 
 ![demo](https://raw.githubusercontent.com/neuml/txtmarker/master/demo.png)
 
-txtmarker highlights text in documents. txtmarker takes a list of (name, text) pairs, scan an input document and creates a modified version with highlights embedded.
+txtmarker highlights text in documents. txtmarker takes a list of (name, text) pairs, scans an input document and creates a modified version with highlights embedded.
 
 Current file formats supported:
 
@@ -40,13 +40,19 @@ Current file formats supported:
 ## Installation
 The easiest way to install is via pip and PyPI
 
-    pip install txtmarker
+```
+pip install txtmarker
+```
 
-You can also install txtmarker directly from GitHub. Using a Python Virtual Environment is recommended.
+Python 3.9+ is supported. Using a Python [virtual environment](https://docs.python.org/3/library/venv.html) is recommended.
 
-    pip install git+https://github.com/neuml/txtmarker
+txtmarker can also be installed directly from GitHub to access the latest, unreleased features.
 
-Python 3.8+ is supported
+```
+pip install git+https://github.com/neuml/txtmarker
+```
+
+Python 3.9+ is supported
 
 ## Examples
 
