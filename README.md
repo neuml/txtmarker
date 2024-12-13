@@ -72,6 +72,8 @@ The following section gives an overview of highlighters and available methods/co
 
 ### Create a new highlighter
 
+Creates a new highlighter instance.
+
 ```python
 from txtmarker.factory import Factory
 highlighter = Factory.create("pdf")
@@ -100,7 +102,24 @@ chunks: int
 
 Splits queries into multiple chunks. This is designed for very long text matches.
 
+### Page text
+
+Extracts page text from `infile` and returns as a generator. This enables analysis on the text exactly as it will appear to the highlighter.
+
+```python
+highlighter.pages("input.pdf")
+```
+
+#### infile
+```yaml
+infile: string
+```
+
+Full path to input file
+
 ### Highlight text
+
+Highlights using provided annotations. Annotated file is stored as `outfile`.
 
 ```python
 highlighter.highlight("input.pdf", "output.pdf", [("name", "text to highlight")])
@@ -125,4 +144,4 @@ Full path to output file, i.e. the highlighted file
 highlights: list of (string, string|regex)
 ```
 
-List of highlight elements. Each pair has a name (can be None) and text value. The text can either be a string or a regular expression.
+List of highlight elements. Each pair has a name (can be None) and text value. The text can either be a string or a regular expression. When using string matching, make sure to escape regular expressions (i.e. call `re.escape`).
