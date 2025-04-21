@@ -21,7 +21,7 @@ setup(
     packages=find_packages(where="src/python"),
     package_dir={"": "src/python"},
     keywords="pdf highlight text search",
-    python_requires=">=3.9",
+    python_requires=">=3.10",
     install_requires=["pdfminer.six>=20201018", "pdf-annotate>=0.11.0"],
     classifiers=[
         "License :: OSI Approved :: Apache Software License",
