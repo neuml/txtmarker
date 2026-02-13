@@ -8,7 +8,7 @@ setup(
     name="txtmarker",
     version="1.1.0",
     author="NeuML",
-    description="Finds and highlights text in documents",
+    description="Highlight text in documents",
     long_description=DESCRIPTION,
     long_description_content_type="text/markdown",
     url="https://github.com/neuml/txtmarker",
